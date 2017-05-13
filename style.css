@@ -1,0 +1,84 @@
+.photos {
+	width: 400px;
+	height: 400px;
+	text-align: center;
+}
+.photos img {
+	width: 100%;
+	height: auto;
+}
+
+html, body {
+	max-width: 100%;
+    overflow-x: hidden;
+}
+.header .content .bottom{
+	display: block;
+}
+.title {
+	right:40px;
+	position: absolute;
+	top: 30px;
+	color: #222222;
+	text-align: right;
+}
+.title h1 {
+	font-family: Helvetica,Verdana;
+	font-size: 24pt;
+	padding: 0px;
+}
+.title h3 {
+	font-family: Helvetica,Verdana;
+	font-size: 20pt;
+}
+.nav {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	background-color: #555555;
+	padding: 5px;
+}
+.nav .link a{
+	font-family: Helvetica,Verdana;
+	font-size: 12pt;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+.photo {
+	width: 300px;
+	height: 300px
+}
+.canvas {
+	flex: 0 0 450px;
+}
+.textytext {
+	font-family: Helvetica,Verdana;
+	font-size: 12pt;
+	text-align: left;
+	width: 300px;
+	flex: 1;
+	padding: 10px;
+}
+.content {
+	position: absolute;
+	top: 100px;
+	left: 10px;
+	width: 80%;
+	display: flex;
+}
+.bottom {
+	font-family: Helvetica,Verdana;
+	font-size: 10pt;
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+
+#drawingCanvas {
+	border: 1px solid black;
+}
+.rgb {
+	width: 20px;
+}
