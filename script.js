@@ -3,7 +3,10 @@ var ctx = undefined;
 var hw,hh,radius;
 var color = "black";
 var ss = document.getElementById("startstop");
-var recog;;
+var recog = new webkitSpeechRecognition();
+recog.continuous = false;
+recog.interimResults = true;
+recog.lang = "en";
 var words;
 
 window.onload = init;
@@ -56,8 +59,6 @@ recog.onresult = function(event){
     }
 function listen(){
     console.log("Listening!");
-    
-    recog = new webkitSpeechRecognition()
     
     recog.start();
     console.log("Result " + words);
