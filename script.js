@@ -28,6 +28,7 @@ function drawCirc(radius = "25",color = "black"){
     ctx.arc(hw,hh,radius,0,Math.PI*2,true);
     ctx.closePath();
     ctx.fill();
+    ctx.stroke();
     ctx.restore();
 }
 
@@ -44,7 +45,7 @@ function changeJob(){
 
 recog.onresult = function(event){
     console.log("started");
-        for (var x = event.resultIndex; i < e.results.length; x++){
+        for (var x = event.resultIndex; x < e.results.length; x++){
             if (e.results[x].isFinal){
                 words += event.results[x][0].transcript;
             }
