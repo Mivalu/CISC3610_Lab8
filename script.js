@@ -44,18 +44,12 @@ function changeJob(){
 }
 
 recog.onresult = function(event){
-    console.log("started");
+    console.log("Started");
         for (var x = event.resultIndex; x < event.results.length; x++){
             if (event.results[x].isFinal){
                 words += event.results[x][0].transcript;
             }
         }
-        if (callback) {
-        callback(null, {
-            transcript: event.results[0][0].transcript,
-            confidence: event.results[0][0].confidence
-        });
-    }
         
     }
 function listen(){
