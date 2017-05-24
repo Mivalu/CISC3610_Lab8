@@ -45,12 +45,12 @@ function changeJob(){
 
 recog.onresult = function(event){
     console.log("Started");
-        for (var x = event.resultIndex; x < event.results.length; x++){
-            if (event.results[x].isFinal){
-                words += event.results[x][0].transcript;
-                console.log("I hear you!");
-            }
+    for (var x = event.resultIndex; x < event.results.length; x++){
+        if (event.results[x].isFinal){
+            words += event.results[x][0].transcript;
+            console.log("I hear you!");
         }
+    }
         
     }
 function listen(){
