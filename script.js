@@ -48,6 +48,7 @@ recog.onresult = function(event){
         for (var x = event.resultIndex; x < event.results.length; x++){
             if (event.results[x].isFinal){
                 words += event.results[x][0].transcript;
+                console.log("I hear you!");
             }
         }
         
