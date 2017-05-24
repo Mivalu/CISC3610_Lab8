@@ -45,7 +45,7 @@ function changeJob(){
 
 recog.onresult = function(event){
     console.log("started");
-        for (var x = event.resultIndex; x < e.results.length; x++){
+        for (var x = event.resultIndex; x < event.results.length; x++){
             if (e.results[x].isFinal){
                 words += event.results[x][0].transcript;
             }
