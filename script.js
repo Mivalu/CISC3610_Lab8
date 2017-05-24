@@ -56,10 +56,11 @@ function listen(){
     console.log("Listening!");
     
     recog.start();
-    console.log("Result " + words);
+    
 }
 
 function stopListen(){
     console.log("Stopped!");
+    console.log("Result " + words);
     recog.abort();
 }
