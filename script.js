@@ -39,15 +39,28 @@ function changeJob(){
     }
 }
 
+recog.onresult = function(event){
+    console.log("started");
+        for (var x = event.resultIndex; i < e.results.length; x++){
+            if (e.results[x].isFinal){
+                words += event.results[x][0].transcript;
+            }
+        }
+        if (callback) {
+        callback(null, {
+            transcript: event.results[0][0].transcript,
+            confidence: event.results[0][0].confidence
+        });
+    }
+        
+    }
 function listen(){
     console.log("Listening!");
     
-    console.log("started")
-    recog.onresult = function(event){
-        words = event.results[0][0].transcript;
-        console.log("Result " + words);
-    }
+    
+    
     recog.start();
+    console.log("Result " + words);
 }
 
 function stopListen(){
